@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Aalu 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      overflow: hidden;
+      text-align: center;
+      color: #fff;
+    }
+
+    h1 {
+      margin-top: 60px;
+      font-size: 3em;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    p {
+      width: 80%;
+      margin: 20px auto;
+      font-size: 1.2em;
+      line-height: 1.6;
+      animation: fadeIn 3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎂 Happy Birthday Aalu 🎂</h1>
+
+  <p>
+    Dear Aalu, on this incredibly special day, I just want to remind you how truly amazing and beautiful you are—not just on the outside, but in the way you bring light and happiness into everyone's life. You have this rare ability to make ordinary moments feel magical, and your smile alone can brighten even the darkest days. I feel so lucky to have you in my life, and I cherish every laugh, every conversation, and every memory we've shared together. You deserve all the happiness, love, and success in the world, not just today but every single day of your life. May your dreams come true, your heart stay full, and your journey ahead be filled with endless joy and unforgettable adventures. Never forget how special you are, because to me, you are truly one of a kind. Happy Birthday once again, Aalu 💖✨
+  </p>
+
+  
+
+  <script>
+
+    // Floating hearts
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '💖';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (3 + Math.random() * 2) + 's';
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
